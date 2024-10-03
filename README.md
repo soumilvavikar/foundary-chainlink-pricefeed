@@ -134,8 +134,8 @@ forge install Cyfrin/foundry-devops --no-commit
 Once the `Interactions.s.sol` script is ready, we can execute it using the following command
 
 ```shell
-forge script script/Interactions.s.sol --tc EthToUsdPriceFeedInteractions --rpc-url $RPC_URL --private-key $PRIVATE_KEY --broadcast
+forge script script/Interactions.s.sol --tc EthToUsdPriceFeedInteractions --rpc-url $RPC_URL --private-key $PRIVATE_KEY
 
-forge script script/Interactions.s.sol --tc LinkToUsdPriceFeedInteractions --rpc-url $RPC_URL --private-key $PRIVATE_KEY --broadcast
+forge script script/Interactions.s.sol --tc LinkToUsdPriceFeedInteractions --rpc-url $RPC_URL --private-key $PRIVATE_KEY
 # Whenever we want to have a newly created forked blockchain whenever you test, you can use --fork-url and --fork-block-number instead of --rpc-url
 ```
