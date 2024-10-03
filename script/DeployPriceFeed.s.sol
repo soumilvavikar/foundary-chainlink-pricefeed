@@ -29,27 +29,3 @@ contract DeployPriceFeed is Script {
         return priceFeed;
     }
 }
-
-/**
- * @title This contract will help us deploy the PriceFeed contract without forking
- * @author Soumil Vavikar
- * @notice NA
- */
-contract DeployPriceFeedWithoutForking is Script {
-    function run() external returns (PriceFeed) {
-        // This variable will help enable forked calls in local anvil instance.
-        bool forkingEnabled = false;
-        HelperConfig helperConfig = new HelperConfig(forkingEnabled);
-
-        (address ethUsdPriceFeed, address linkUsdPriceFeed) = helperConfig
-            .activeNetworkConfig();
-
-        vm.startBroadcast();
-
-        PriceFeed priceFeed = new PriceFeed(ethUsdPriceFeed, linkUsdPriceFeed);
-
-        vm.stopBroadcast();
-
-        return priceFeed;
-    }
-}
