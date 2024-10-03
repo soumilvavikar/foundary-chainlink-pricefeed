@@ -3,7 +3,7 @@ pragma solidity ^0.8.27;
 
 import {Test, console} from "lib/forge-std/src/Test.sol";
 import {PriceFeed} from "../../src/PriceFeed.sol";
-import {DeployPriceFeedWithoutForking} from "../../script/DeployPriceFeed.s.sol";
+import {DeployPriceFeedWithoutForking} from "../../script/DeployPriceFeedWithoutForking.s.sol";
 import {StdCheats} from "forge-std/StdCheats.sol";
 
 /**
